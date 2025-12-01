@@ -1,6 +1,8 @@
 :root{
     --primario: greenyellow ;
     --secundario: blue;
+    --oscuro: black;
+    --blanco: white;
 }
 
 html{
@@ -22,11 +24,16 @@ body{
 }
 
 h1{
+    text-align: center;
     font-size: 2rem;
 }
 
 h2{
+    text-align: center;
     font-size: 1.5rem;
+}
+h3{
+    text-align: center;
 }
 
 .titulo{
@@ -45,11 +52,113 @@ p{
     
 }
 
+@media (min-width: 400px) {
+    body{
+        background-color: cornflowerblue;
+    }
+}
+
+
 .navegacion-principal{
+    text-align: center;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color:var(--primario);
 }
 
-.navegacion-principal a{
-    color: red;
+@media (min-width: 700px) {
+    .navegacion-principal{
+        flex-direction: row;
+    }
+    
 }
 
+.navegacion-principal a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem 1rem 1rem 1rem;
+    
+}
+
+.navegacion-principal a:hover{
+    color: var(--oscuro);
+    background-color:var(--secundario);
+}
+
+.hero{
+    background-image: url("../img/movil9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+    
+}
+
+.contenido-hero{
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.button{
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 1rem;
+    width: auto;
+    text-align: center;
+    border: none;
+}
+
+.categorias{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+@media (min-width:760px) {
+    .categorias{
+        flex-direction: row;
+    }
+}
+
+.contenido h3{
+    font-weight: normal;
+    color: var(--primario);
+}
+
+.contenido p{
+    font-weight: 1.5rem;
+    line-height: 2;
+    text-align: center;
+}
+
+.icono{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 100%;
+    display: flex;
+    background-color: var(--blanco);
+    justify-content: center;
+    align-items: center;
+}
