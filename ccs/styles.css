@@ -3,10 +3,15 @@
     --secundario: blue;
     --oscuro: black;
     --blanco: white;
+    --gris:grey;
 }
 
 html{
    font-size: 62.5%;
+}
+
+fieldset{
+    border: none;
 }
 
 body{
@@ -161,4 +166,34 @@ p{
     background-color: var(--blanco);
     justify-content: center;
     align-items: center;
+}
+
+.formulario{
+    background-color: var(--gris);
+    width: 60rem;
+    margin: auto;
+    border-radius: 2rem;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: rgb(192, 192, 227);
+    font-weight: bold;
+    display: block;
+}
+
+.text-input{
+    width: 95%;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
 }
